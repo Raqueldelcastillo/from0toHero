@@ -3,11 +3,12 @@ import { CarouselCaption } from 'reactstrap';
 
 function CSSSlide() {
   const keyPoints = [
-    'What is HTML?',
-    'What is HTML element?',
-    'HTML page structure',
-    'Basic HTML elements and tags',
-    'Practice',
+    'What is CSS and what it is used for?',
+    'Understand the basics.',
+    'Learn layout techniques.',
+    'Explore CSS properties.',
+    'Understand specificity and inheritance.',
+    'Practice responsivness.'
   ];
 
   return (
