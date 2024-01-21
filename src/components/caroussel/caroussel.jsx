@@ -6,13 +6,24 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import InternetSlide from "./InternetSlide";
-import HTMLSlide from './HtmlSlide';
+import InternetSlide from "../caroussel_slides/InternetSlide";
+import HTMLSlide from '../caroussel_slides/HtmlSlide';
+import CSSSlide from '../caroussel_slides/CSSSlide';
+import GitSlide from '../caroussel_slides/GitSlide';
+import JavascriptSlide from '../caroussel_slides/JavascriptSlide';
+import NPMSlide from '../caroussel_slides/NPMSlide';
+import JestSlide from '../caroussel_slides/JestSlide';
+import ReactSlide from '../caroussel_slides/ReactSlide';
 
 const slideComponentMap = {
     'Internet': InternetSlide,
     'HTML': HTMLSlide,
-
+    'CSS': CSSSlide,
+    'Git': GitSlide,
+    'Javascript': JavascriptSlide,
+    'NPM': NPMSlide,
+    'Jest': JestSlide,
+    'React': ReactSlide,
   };
 
 const DefaultSlide = InternetSlide;
