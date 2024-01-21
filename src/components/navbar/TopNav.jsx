@@ -86,8 +86,7 @@ function Example(props) {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Resources</NavLink> 
-              
+              <NavLink href="/components/">Resources</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
