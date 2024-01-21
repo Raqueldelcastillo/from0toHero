@@ -14,7 +14,7 @@ function ReactSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="React Slide" />
+      <img src="https://picsum.photos/id/379/1200/400" alt="React Slide" />
       <CarouselCaption captionText="React" captionHeader="React" />
       <div className="react-key-points">
         <ul>

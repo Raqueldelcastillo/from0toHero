@@ -13,7 +13,7 @@ function JestSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="Jest Slide" />
+      <img src="https://picsum.photos/id/307/1200/400" alt="Jest Slide" />
       <CarouselCaption captionText="Jest" captionHeader="Jest" />
       <div className="jest-key-points">
         <ul>

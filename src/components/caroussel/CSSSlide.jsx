@@ -13,7 +13,7 @@ function CSSSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="CSS Slide" />
+      <img src="https://picsum.photos/id/48/1200/400" alt="CSS Slide" />
       <CarouselCaption captionText="CSS" captionHeader="CSS" />
       <div className="css-key-points">
         <ul>
