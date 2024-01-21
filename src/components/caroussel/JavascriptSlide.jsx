@@ -5,12 +5,13 @@ function JavascriptSlide() {
   const keyPoints = [
     'What is Javascript?',
     'Understand the structure of Javascript.',
-    'Learn basics of variables, functions, arrays and objects.',
+    'Learn basics of Variables, Functions, Arrays and Objects.',
     'Learn basics of Data structures.',
     'Learn basics of DOM manipulation.',
     'Learn basics of JSON.',
     'Learn basics of Web API',
     'Learn basics of how to use NPM with Javascript',
+    'Practice!',
   ];
 
   return (

@@ -5,9 +5,10 @@ function NPMSlide() {
   const keyPoints = [
     'What is NPM?',
     'What is Node.js?',
-    'Learn the basics of its dependencies.',
+    'Learn the basics of its Dependencies.',
     'How to install and use NPM?',
     'Learn using it with Package.json.',
+    'Practice!',
   ];
 
   return (
