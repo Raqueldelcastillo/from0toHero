@@ -8,6 +8,7 @@ function JestSlide() {
     'Install and set up Jest.',
     'Learn the basics of testing functions.',
     'Learn the basics of how to debug the failed test.',
+    'Practice!',
   ];
 
   return (

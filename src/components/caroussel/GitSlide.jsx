@@ -8,6 +8,7 @@ function GitSlide() {
     'Install and create GitHub profile.',
     'Learn basics of Git.',
     'Git workflow.',
+    'Practice!',
   ];
 
   return (
