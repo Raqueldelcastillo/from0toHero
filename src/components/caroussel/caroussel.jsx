@@ -6,7 +6,16 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import InternetSlide from "./InternetSlide"
+import InternetSlide from "./InternetSlide";
+import HTMLSlide from './HtmlSlide';
+
+const slideComponentMap = {
+    'Internet': InternetSlide,
+    'HTML': HTMLSlide,
+
+  };
+
+const DefaultSlide = InternetSlide;
 
 const items = [
   {
@@ -95,32 +104,61 @@ function RoadMap(args) {
 //       </CarouselItem>
 //     );
 //   });
+
 const slides = items.map((item) => {
-    if (item.caption === "Internet") {
-      return (
-        <CarouselItem
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-          key={item.key}
-        >
-          <InternetSlide />
-        </CarouselItem>
-      );
-    } else {
-      return (
-        <CarouselItem
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-          key={item.key}
-        >
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption
-            captionText={item.caption}
-            captionHeader={item.caption}
-          />
-        </CarouselItem>
-      );
-    }})
+    const SlideComponent = slideComponentMap[item.caption] || DefaultSlide; // Use a default slide component as a fallback
+
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.key}
+      >
+        {SlideComponent ? <SlideComponent /> : (
+          <>
+            <img src={item.src} alt={item.altText} />
+            <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          </>
+        )}
+      </CarouselItem>
+    );
+  });
+// const slides = items.map((item) => {
+//     if (item.caption === "Internet") {
+//       return (
+//         <CarouselItem
+//           onExiting={() => setAnimating(true)}
+//           onExited={() => setAnimating(false)}
+//           key={item.key}
+//         >
+//           <InternetSlide />
+//         </CarouselItem>
+//       );
+//     } else if (item.caption === "HTML") {
+//         return (
+//           <CarouselItem
+//             onExiting={() => setAnimating(true)}
+//             onExited={() => setAnimating(false)}
+//             key={item.key}
+//           >
+//             <HTMLSlide />
+//           </CarouselItem>
+//         );
+//       } else {
+//       return (
+//         <CarouselItem
+//           onExiting={() => setAnimating(true)}
+//           onExited={() => setAnimating(false)}
+//           key={item.key}
+//         >
+//           <img src={item.src} alt={item.altText} />
+//           <CarouselCaption
+//             captionText={item.caption}
+//             captionHeader={item.caption}
+//           />
+//         </CarouselItem>
+//       );
+//     }})
 
 
   return (

@@ -10,7 +10,7 @@ function InternetSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="Internet Slide" />
+      <img src="https://picsum.photos/id/24/1200/400" alt="Internet Slide" />
       <CarouselCaption captionText="Internet" captionHeader="Internet" />
       <div className="internet-key-points">
         <ul>
