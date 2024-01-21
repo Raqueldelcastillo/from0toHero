@@ -13,7 +13,7 @@ function NPMSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="NPM Slide" />
+      <img src="https://picsum.photos/id/143/1200/400" alt="NPM Slide" />
       <CarouselCaption captionText="NPM" captionHeader="NPM" />
       <div className="npm-key-points">
         <ul>

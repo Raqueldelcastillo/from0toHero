@@ -16,7 +16,7 @@ function JavascriptSlide() {
 
   return (
     <>
-      <img src="https://picsum.photos/id/456/1200/400" alt="Javascript Slide" />
+      <img src="https://picsum.photos/id/120/1200/400" alt="Javascript Slide" />
       <CarouselCaption captionText="Javascript" captionHeader="Javascript" />
       <div className="javascript-key-points">
         <ul>
