@@ -1,14 +1,14 @@
 import React from 'react';
 import { CarouselCaption } from 'reactstrap';
-import './index.css';
-
+import useKeyPoints from '../carousel_slides_icons/slideIcons';
 
 function InternetSlide() {
-  const keyPoints = [
-    'How does Internet work?',
-    'How do websites work?',
-    'How to get help when you are stuck?',
-  ];
+  // const keyPoints = [
+  //   'How does Internet work?',
+  //   'How do websites work?',
+  //   'How to get help when you are stuck?',
+  // ];
+  const keyPoints = useKeyPoints('internet');
 
   return (
     <>
@@ -17,10 +17,10 @@ function InternetSlide() {
         <div className="caption-title">
           <h3>Internet</h3>
         </div>
-        <div className="internet-key-points">
+        <div className="key-points">
           <ul>
             {keyPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li key={index}><point.Icon />{point.text}</li>
             ))}
           </ul>
         </div>

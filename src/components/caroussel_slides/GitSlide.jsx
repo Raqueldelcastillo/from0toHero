@@ -1,15 +1,19 @@
 import React from 'react';
 import { CarouselCaption } from 'reactstrap';
+import useKeyPoints from '../carousel_slides_icons/slideIcons';
+
 
 function GitSlide() {
-  const keyPoints = [
-    'What is Github and Git?',
-    'Benefits of using Git.',
-    'Install and create GitHub profile.',
-    'Learn basics of Git.',
-    'Git workflow.',
-    'Practice!',
-  ];
+  // const keyPoints = [
+  //   'What is Github and Git?',
+  //   'Benefits of using Git.',
+  //   'Install and create GitHub profile.',
+  //   'Learn basics of Git.',
+  //   'Git workflow.',
+  //   'Practice!',
+  // ];
+
+  const keyPoints = useKeyPoints('git');
 
   return (
     <>
@@ -18,10 +22,10 @@ function GitSlide() {
         <div className="caption-title">
           <h3>Git</h3>
         </div>
-        <div className="git-key-points">
+        <div className="key-points">
           <ul>
             {keyPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li key={index}><point.Icon />{point.text}</li>
             ))}
           </ul>
         </div>

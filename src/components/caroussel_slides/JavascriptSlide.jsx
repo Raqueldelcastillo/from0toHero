@@ -1,18 +1,22 @@
 import React from 'react';
 import { CarouselCaption } from 'reactstrap';
+import useKeyPoints from '../carousel_slides_icons/slideIcons';
+
 
 function JavascriptSlide() {
-  const keyPoints = [
-    'What is Javascript?',
-    'Understand the structure of Javascript.',
-    'Learn basics of Variables, Functions, Arrays and Objects.',
-    'Learn basics of Data structures.',
-    'Learn basics of DOM manipulation.',
-    'Learn basics of JSON.',
-    'Learn basics of Web API',
-    'Learn basics of how to use NPM with Javascript',
-    'Practice!',
-  ];
+  // const keyPoints = [
+  //   'What is Javascript?',
+  //   'Understand the structure of Javascript.',
+  //   'Learn basics of Variables, Functions, Arrays and Objects.',
+  //   'Learn basics of Data structures.',
+  //   'Learn basics of DOM manipulation.',
+  //   'Learn basics of JSON.',
+  //   'Learn basics of Web API',
+  //   'Learn basics of how to use NPM with Javascript',
+  //   'Practice!',
+  // ];
+  const keyPoints = useKeyPoints('javascript');
+  
 
   return (
     <>
@@ -21,10 +25,10 @@ function JavascriptSlide() {
         <div className="caption-title">
           <h3>JavaScript</h3>
         </div>
-        <div className="javascript-key-points">
+        <div className="key-points">
           <ul>
             {keyPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li key={index}><point.Icon />{point.text}</li>
             ))}
           </ul>
         </div>

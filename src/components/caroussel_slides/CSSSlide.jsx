@@ -1,15 +1,18 @@
 import React from 'react';
 import { CarouselCaption } from 'reactstrap';
+import useKeyPoints from '../carousel_slides_icons/slideIcons';
+
 
 function CSSSlide() {
-  const keyPoints = [
-    'What is CSS and what it is used for?',
-    'Understand the basics.',
-    'Learn layout techniques.',
-    'Explore CSS properties.',
-    'Understand specificity and inheritance.',
-    'Practice responsivness.'
-  ];
+  // const keyPoints = [
+  //   'What is CSS and what it is used for?',
+  //   'Understand the basics.',
+  //   'Learn layout techniques.',
+  //   'Explore CSS properties.',
+  //   'Understand specificity and inheritance.',
+  //   'Practice responsivness.'
+  // ];
+  const keyPoints = useKeyPoints('css');
 
   return (
     <>
@@ -18,10 +21,10 @@ function CSSSlide() {
         <div className="caption-title">
           <h3>CSS - Cascading Style Sheet</h3>
         </div>
-        <div className="html-key-points">
+        <div className="key-points">
           <ul>
             {keyPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li key={index}><point.Icon />{point.text}</li>
             ))}
           </ul>
         </div>
