@@ -15,13 +15,17 @@ function ReactSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/379/1200/400" alt="React Slide" />
-      <CarouselCaption captionText="React" captionHeader="React" />
-      <div className="react-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>Frontend Framework - React</h3>
+        </div>
+        <div className="react-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

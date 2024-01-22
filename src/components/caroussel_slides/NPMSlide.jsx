@@ -14,13 +14,17 @@ function NPMSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/143/1200/400" alt="NPM Slide" />
-      <CarouselCaption captionText="NPM" captionHeader="NPM" />
-      <div className="npm-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>Package Managers - NPM</h3>
+        </div>
+        <div className="npm-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

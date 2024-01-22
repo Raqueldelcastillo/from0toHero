@@ -14,6 +14,7 @@ import JavascriptSlide from '../caroussel_slides/JavascriptSlide';
 import NPMSlide from '../caroussel_slides/NPMSlide';
 import JestSlide from '../caroussel_slides/JestSlide';
 import ReactSlide from '../caroussel_slides/ReactSlide';
+import '../caroussel_slides/index.css';
 
 const slideComponentMap = {
     'Internet': InternetSlide,
@@ -117,7 +118,7 @@ function RoadMap(args) {
 //   });
 
 const slides = items.map((item) => {
-    const SlideComponent = slideComponentMap[item.caption] || DefaultSlide; // Use a default slide component as a fallback
+    const SlideComponent = slideComponentMap[item.caption] || DefaultSlide;
 
     return (
       <CarouselItem

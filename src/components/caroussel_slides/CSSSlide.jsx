@@ -14,13 +14,17 @@ function CSSSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/48/1200/400" alt="CSS Slide" />
-      <CarouselCaption captionText="CSS" captionHeader="CSS" />
-      <div className="css-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>CSS - Cascading Style Sheet</h3>
+        </div>
+        <div className="html-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

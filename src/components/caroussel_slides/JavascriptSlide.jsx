@@ -17,13 +17,17 @@ function JavascriptSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/120/1200/400" alt="Javascript Slide" />
-      <CarouselCaption captionText="Javascript" captionHeader="Javascript" />
-      <div className="javascript-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>JavaScript</h3>
+        </div>
+        <div className="javascript-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

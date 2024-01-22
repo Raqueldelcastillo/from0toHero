@@ -14,13 +14,17 @@ function GitSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/98/1200/400" alt="Git Slide" />
-      <CarouselCaption captionText="Git" captionHeader="Git" />
-      <div className="git-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>Git</h3>
+        </div>
+        <div className="git-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

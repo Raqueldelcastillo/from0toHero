@@ -1,5 +1,6 @@
 import React from 'react';
 import { CarouselCaption } from 'reactstrap';
+import './index.css';
 
 function HTMLSlide() {
   const keyPoints = [
@@ -13,13 +14,17 @@ function HTMLSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/41/1200/400" alt="HTML Slide" />
-      <CarouselCaption captionText="HTML" captionHeader="HTML" />
-      <div className="html-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>HTML - The HyperText Markup Language</h3>
+        </div>
+        <div className="html-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

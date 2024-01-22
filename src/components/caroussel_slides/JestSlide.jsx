@@ -14,13 +14,17 @@ function JestSlide() {
   return (
     <>
       <img src="https://picsum.photos/id/307/1200/400" alt="Jest Slide" />
-      <CarouselCaption captionText="Jest" captionHeader="Jest" />
-      <div className="jest-key-points">
-        <ul>
-          {keyPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+      <div className="slide-content">
+        <div className="caption-title">
+          <h3>Testing your App - Jest</h3>
+        </div>
+        <div className="jest-key-points">
+          <ul>
+            {keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
