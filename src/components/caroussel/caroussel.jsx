@@ -14,7 +14,7 @@ import JavascriptSlide from '../caroussel_slides/JavascriptSlide';
 import NPMSlide from '../caroussel_slides/NPMSlide';
 import JestSlide from '../caroussel_slides/JestSlide';
 import ReactSlide from '../caroussel_slides/ReactSlide';
-import '../caroussel_slides/index.css';
+import './index.css';
 
 const slideComponentMap = {
     'Internet': InternetSlide,
