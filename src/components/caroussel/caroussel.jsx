@@ -6,7 +6,28 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import InternetSlide from "./InternetSlide"
+import InternetSlide from "../caroussel_slides/InternetSlide";
+import HTMLSlide from '../caroussel_slides/HtmlSlide';
+import CSSSlide from '../caroussel_slides/CSSSlide';
+import GitSlide from '../caroussel_slides/GitSlide';
+import JavascriptSlide from '../caroussel_slides/JavascriptSlide';
+import NPMSlide from '../caroussel_slides/NPMSlide';
+import JestSlide from '../caroussel_slides/JestSlide';
+import ReactSlide from '../caroussel_slides/ReactSlide';
+import '../caroussel_slides/index.css';
+
+const slideComponentMap = {
+    'Internet': InternetSlide,
+    'HTML': HTMLSlide,
+    'CSS': CSSSlide,
+    'Git': GitSlide,
+    'Javascript': JavascriptSlide,
+    'NPM': NPMSlide,
+    'Jest': JestSlide,
+    'React': ReactSlide,
+  };
+
+const DefaultSlide = InternetSlide;
 
 const items = [
   {
@@ -95,32 +116,61 @@ function RoadMap(args) {
 //       </CarouselItem>
 //     );
 //   });
+
 const slides = items.map((item) => {
-    if (item.caption === "Internet") {
-      return (
-        <CarouselItem
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-          key={item.key}
-        >
-          <InternetSlide />
-        </CarouselItem>
-      );
-    } else {
-      return (
-        <CarouselItem
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-          key={item.key}
-        >
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption
-            captionText={item.caption}
-            captionHeader={item.caption}
-          />
-        </CarouselItem>
-      );
-    }})
+    const SlideComponent = slideComponentMap[item.caption] || DefaultSlide;
+
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.key}
+      >
+        {SlideComponent ? <SlideComponent /> : (
+          <>
+            <img src={item.src} alt={item.altText} />
+            <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          </>
+        )}
+      </CarouselItem>
+    );
+  });
+// const slides = items.map((item) => {
+//     if (item.caption === "Internet") {
+//       return (
+//         <CarouselItem
+//           onExiting={() => setAnimating(true)}
+//           onExited={() => setAnimating(false)}
+//           key={item.key}
+//         >
+//           <InternetSlide />
+//         </CarouselItem>
+//       );
+//     } else if (item.caption === "HTML") {
+//         return (
+//           <CarouselItem
+//             onExiting={() => setAnimating(true)}
+//             onExited={() => setAnimating(false)}
+//             key={item.key}
+//           >
+//             <HTMLSlide />
+//           </CarouselItem>
+//         );
+//       } else {
+//       return (
+//         <CarouselItem
+//           onExiting={() => setAnimating(true)}
+//           onExited={() => setAnimating(false)}
+//           key={item.key}
+//         >
+//           <img src={item.src} alt={item.altText} />
+//           <CarouselCaption
+//             captionText={item.caption}
+//             captionHeader={item.caption}
+//           />
+//         </CarouselItem>
+//       );
+//     }})
 
 
   return (
