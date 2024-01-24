@@ -82,7 +82,7 @@ export default function SearchBar() {
       <div className="searchBar">
         <InputBase
           className="inputBase"
-          placeholder="Search…"
+          placeholder="Explore more.."
           inputProps={{ 'aria-label': 'search' }}
           value={searchTerm}
           onChange={handleInputChange}
