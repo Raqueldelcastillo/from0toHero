@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "reactstrap";
-
+import Heroimage from "./heroimage";
+import { Container } from "@mui/material";
 const HeroSection = () => {
   return (
     // <div class="jumbotron jumbotron-fluid">
@@ -13,10 +14,9 @@ const HeroSection = () => {
     //   </div>
     // </div>
     <div>
-      <h1 className="display-4">Zhero</h1>
-      <p className="lead">
-        Learn Front-end development de go from Zero to Hero.
-      </p>
+      <Container>
+        <Heroimage />
+      </Container>
       {/* <Button variant="primary">Learn More</Button> */}
     </div>
   );
