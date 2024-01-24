@@ -9,13 +9,11 @@ import Cardcontainer from "./components/ResourcesCards/cardcontainer";
 function App() {
   return (
     <div>
-      <div>
-        <TopNav />
-        <HeroSection />
-        <SearchBox />
-        <Caroussel />
-        <Cardcontainer />
-      </div>
+      <TopNav />
+      <HeroSection />
+      <SearchBox />
+      <Caroussel />
+      <Cardcontainer />
     </div>
   );
 }

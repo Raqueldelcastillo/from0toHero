@@ -1,81 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-} from 'reactstrap';
+} from "reactstrap";
 import InternetSlide from "../caroussel_slides/InternetSlide";
-import HTMLSlide from '../caroussel_slides/HtmlSlide';
-import CSSSlide from '../caroussel_slides/CSSSlide';
-import GitSlide from '../caroussel_slides/GitSlide';
-import JavascriptSlide from '../caroussel_slides/JavascriptSlide';
-import NPMSlide from '../caroussel_slides/NPMSlide';
-import JestSlide from '../caroussel_slides/JestSlide';
-import ReactSlide from '../caroussel_slides/ReactSlide';
-import './index.css';
+import HTMLSlide from "../caroussel_slides/HtmlSlide";
+import CSSSlide from "../caroussel_slides/CSSSlide";
+import GitSlide from "../caroussel_slides/GitSlide";
+import JavascriptSlide from "../caroussel_slides/JavascriptSlide";
+import NPMSlide from "../caroussel_slides/NPMSlide";
+import JestSlide from "../caroussel_slides/JestSlide";
+import ReactSlide from "../caroussel_slides/ReactSlide";
+import "./index.css";
 
 const slideComponentMap = {
-    'Internet': InternetSlide,
-    'HTML': HTMLSlide,
-    'CSS': CSSSlide,
-    'Git': GitSlide,
-    'Javascript': JavascriptSlide,
-    'NPM': NPMSlide,
-    'Jest': JestSlide,
-    'React': ReactSlide,
-  };
+  Internet: InternetSlide,
+  HTML: HTMLSlide,
+  CSS: CSSSlide,
+  Git: GitSlide,
+  Javascript: JavascriptSlide,
+  NPM: NPMSlide,
+  Jest: JestSlide,
+  React: ReactSlide,
+};
 
 const DefaultSlide = InternetSlide;
 
 const items = [
   {
-    src: 'https://picsum.photos/id/123/1200/400',
-    altText: 'Internet',
-    caption: 'Internet',
+    src: "https://picsum.photos/id/123/1200/400",
+    altText: "Internet",
+    caption: "Internet",
     key: 1,
   },
   {
-    src: 'https://picsum.photos/id/456/1200/400',
-    altText: 'HTML',
-    caption: 'HTML',
+    src: "https://picsum.photos/id/456/1200/400",
+    altText: "HTML",
+    caption: "HTML",
     key: 2,
   },
   {
-    src: 'https://picsum.photos/id/678/1200/400',
-    altText: 'slide 3',
-    caption: 'CSS',
+    src: "https://picsum.photos/id/678/1200/400",
+    altText: "slide 3",
+    caption: "CSS",
     key: 3,
   },
   {
-    src: 'https://picsum.photos/1200/400/?blur',
-    altText: 'Git',
-    caption: 'Git',
+    src: "https://picsum.photos/1200/400/?blur",
+    altText: "Git",
+    caption: "Git",
     key: 4,
   },
   {
-    src: 'https://picsum.photos/1200/400?grayscale',
-    altText: 'JS',
-    caption: 'Javascript',
+    src: "https://picsum.photos/1200/400?grayscale",
+    altText: "JS",
+    caption: "Javascript",
     key: 5,
   },
   {
-    src: 'https://picsum.photos/1200/400?grayscale',
-    altText: 'NPM',
-    caption: 'NPM',
+    src: "https://picsum.photos/1200/400?grayscale",
+    altText: "NPM",
+    caption: "NPM",
     key: 6,
   },
   {
-    src: 'https://picsum.photos/1200/400?grayscale',
-    altText: 'Jest',
-    caption: 'Jest',
+    src: "https://picsum.photos/1200/400?grayscale",
+    altText: "Jest",
+    caption: "Jest",
     key: 7,
   },
   {
-    src: 'https://picsum.photos/1200/400?grayscale',
-    altText: 'React',
-    caption: 'React',
+    src: "https://picsum.photos/1200/400?grayscale",
+    altText: "React",
+    caption: "React",
     key: 8,
   },
 ];
@@ -101,23 +101,23 @@ function RoadMap(args) {
     setActiveIndex(newIndex);
   };
 
-//   const slides = items.map((item) => {
-//     return (
-//       <CarouselItem
-//         onExiting={() => setAnimating(true)}
-//         onExited={() => setAnimating(false)}
-//         key={item.src}
-//       >
-//         <img src={item.src} alt={item.altText} />
-//         <CarouselCaption
-//           captionText={item.caption}
-//           captionHeader={item.caption}
-//         />
-//       </CarouselItem>
-//     );
-//   });
+  //   const slides = items.map((item) => {
+  //     return (
+  //       <CarouselItem
+  //         onExiting={() => setAnimating(true)}
+  //         onExited={() => setAnimating(false)}
+  //         key={item.src}
+  //       >
+  //         <img src={item.src} alt={item.altText} />
+  //         <CarouselCaption
+  //           captionText={item.caption}
+  //           captionHeader={item.caption}
+  //         />
+  //       </CarouselItem>
+  //     );
+  //   });
 
-const slides = items.map((item) => {
+  const slides = items.map((item) => {
     const SlideComponent = slideComponentMap[item.caption] || DefaultSlide;
 
     return (
@@ -126,79 +126,83 @@ const slides = items.map((item) => {
         onExited={() => setAnimating(false)}
         key={item.key}
       >
-        {SlideComponent ? <SlideComponent /> : (
+        {SlideComponent ? (
+          <SlideComponent />
+        ) : (
           <>
             <img src={item.src} alt={item.altText} />
-            <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+            <CarouselCaption
+              captionText={item.caption}
+              captionHeader={item.caption}
+            />
           </>
         )}
       </CarouselItem>
     );
   });
-// const slides = items.map((item) => {
-//     if (item.caption === "Internet") {
-//       return (
-//         <CarouselItem
-//           onExiting={() => setAnimating(true)}
-//           onExited={() => setAnimating(false)}
-//           key={item.key}
-//         >
-//           <InternetSlide />
-//         </CarouselItem>
-//       );
-//     } else if (item.caption === "HTML") {
-//         return (
-//           <CarouselItem
-//             onExiting={() => setAnimating(true)}
-//             onExited={() => setAnimating(false)}
-//             key={item.key}
-//           >
-//             <HTMLSlide />
-//           </CarouselItem>
-//         );
-//       } else {
-//       return (
-//         <CarouselItem
-//           onExiting={() => setAnimating(true)}
-//           onExited={() => setAnimating(false)}
-//           key={item.key}
-//         >
-//           <img src={item.src} alt={item.altText} />
-//           <CarouselCaption
-//             captionText={item.caption}
-//             captionHeader={item.caption}
-//           />
-//         </CarouselItem>
-//       );
-//     }})
-
+  // const slides = items.map((item) => {
+  //     if (item.caption === "Internet") {
+  //       return (
+  //         <CarouselItem
+  //           onExiting={() => setAnimating(true)}
+  //           onExited={() => setAnimating(false)}
+  //           key={item.key}
+  //         >
+  //           <InternetSlide />
+  //         </CarouselItem>
+  //       );
+  //     } else if (item.caption === "HTML") {
+  //         return (
+  //           <CarouselItem
+  //             onExiting={() => setAnimating(true)}
+  //             onExited={() => setAnimating(false)}
+  //             key={item.key}
+  //           >
+  //             <HTMLSlide />
+  //           </CarouselItem>
+  //         );
+  //       } else {
+  //       return (
+  //         <CarouselItem
+  //           onExiting={() => setAnimating(true)}
+  //           onExited={() => setAnimating(false)}
+  //           key={item.key}
+  //         >
+  //           <img src={item.src} alt={item.altText} />
+  //           <CarouselCaption
+  //             captionText={item.caption}
+  //             captionHeader={item.caption}
+  //           />
+  //         </CarouselItem>
+  //       );
+  //     }})
 
   return (
     <div>
-        <h2 className="text-center my-4">Roadmap</h2>
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-      {...args}
-    >
-      <CarouselIndicators
-        items={items}
+      <h2 className="text-center my-4">Roadmap</h2>
+      <Carousel
         activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-      />
-    </Carousel>
+        next={next}
+        previous={previous}
+        {...args}
+      >
+        <CarouselIndicators
+          items={items}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+        />
+      </Carousel>
     </div>
   );
 }
