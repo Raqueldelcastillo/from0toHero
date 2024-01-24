@@ -24,15 +24,16 @@
     border-radius: 10px;
   };
 
-.subscribeButton {
-    background-color: #0F6466 ;
-}
-.formContainer {
-    display: flex;
-    align-items: center;
+  Button {
+      background-color: #0F6466 ;
+  }
+
+  .formContainer {
+      display: flex;
+      align-items: center;
     justify-content: center;
     gap: 10px;
-  }
+}
 
 .modalStyle {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 2.0) !important; 

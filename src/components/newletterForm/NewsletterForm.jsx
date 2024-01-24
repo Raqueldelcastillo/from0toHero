@@ -35,7 +35,7 @@ export default function NewsletterSubscription() {
           label="Enter your email" 
           margin="normal"
         />
-        <Button className="subscribeButton" color="primary" type="submit">
+        <Button className="subscribeButton" style={{ backgroundColor: "#0F6466", color: "white" }} type="submit">
           Subscribe
         </Button>
         </div>
