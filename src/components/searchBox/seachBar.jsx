@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import './SearchBar.css'; 
+// add favourite icons
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const [data, setData] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    // Retrieve favorites from local storage
+    const localData = localStorage.getItem('favorites');
+    return localData ? JSON.parse(localData) : {};
+    // console.log("saved:", localData);
+  });
 
-  const handleSearch = async () => {
+    const handleSearch = async () => {
     console.log("Search button pressed");
     try {
       const response = await fetch('https://api.sampleapis.com/codingresources/codingResources');
@@ -27,17 +37,45 @@ export default function SearchBar() {
     setSearchTerm(event.target.value);
   };
 
-  // Function to render each item
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+  // console.log("exsisting favourites:", favorites);
+
+
+
+  const toggleFavorite = (item) => {
+    setFavorites(prevFavorites => {
+      const updatedFavorites = { ...prevFavorites };
+      if (updatedFavorites[item.url]) {
+        delete updatedFavorites[item.url]; 
+        console.log("removed from favourites:", item.url);
+      } else {
+        updatedFavorites[item.url] = item; 
+        console.log("favourites:", item.url);
+      }
+      return updatedFavorites;
+    });
+  };
+
   const renderData = () => {
     return data.map((item, index) => (
       <div key={index}>
-        <h3>{item.description}</h3>
+        <h3>
+          {favorites[item.url] ? (
+            <FavoriteIcon onClick={() => toggleFavorite(item)} />
+          ) : (
+            <FavoriteBorderIcon onClick={() => toggleFavorite(item)} />
+          )}
+          {item.description}
+        </h3>
         <a href={item.url} target="_blank" rel="noopener noreferrer">
           {item.url}
         </a>
       </div>
     ));
-  };  
+  };
+
 
   return (
     <div>
