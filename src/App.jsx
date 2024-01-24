@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
-
 import TopNav from "./components/navbar/TopNav";
 import Caroussel from "./components/caroussel/caroussel";
+import SearchBox from "./components/searchBox/seachBox";
+import HeroSection from "./components/hero/Hero";
 function App() {
   return (
     <div>
-      <TopNav />;
-      <Caroussel />;
+      <div>
+        <TopNav />
+        <HeroSection />
+        <SearchBox />
+        <Caroussel />
+      </div>
     </div>
   );
 }
