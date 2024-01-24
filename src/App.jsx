@@ -4,6 +4,8 @@ import TopNav from "./components/navbar/TopNav";
 import Caroussel from "./components/caroussel/caroussel";
 import SearchBox from "./components/searchBox/seachBox";
 import HeroSection from "./components/hero/Hero";
+import Cardcontainer from "./components/ResourcesCards/cardcontainer";
+
 function App() {
   return (
     <div>
@@ -12,6 +14,7 @@ function App() {
         <HeroSection />
         <SearchBox />
         <Caroussel />
+        <Cardcontainer />
       </div>
     </div>
   );
