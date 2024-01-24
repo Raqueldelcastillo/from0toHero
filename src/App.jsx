@@ -7,6 +7,7 @@ import HeroSection from "./components/hero/Hero";
 import Cardcontainer from "./components/ResourcesCards/cardcontainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NewsletterForm from './components/newletterForm/NewsletterForm';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Caroussel />
         <Cardcontainer />
         < NewsletterForm />
+        < Footer />
       </div>
     </div>
   );
