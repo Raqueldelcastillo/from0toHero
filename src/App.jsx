@@ -8,12 +8,14 @@ import Resources from "./pages/Resources";
 
 import TopNav from "./components/navbar/TopNav";
 import Caroussel from "./components/caroussel/caroussel";
+
 function App() {
   return (
     <div>
       <Router>
         <TopNav />;
         <Caroussel />; {/* Wrap Route elements in a Routes component */}
+        
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
