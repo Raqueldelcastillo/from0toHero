@@ -1,0 +1,36 @@
+/* SearchBar.css */
+
+.searchBar {
+  position: relative;
+  border-radius: 4px;
+  background-color: #D2E8E3;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.searchBar:hover {
+  background-color: #FFCB9A;
+}
+
+.inputBase {
+  color: inherit;
+  width: calc(100% - 48px); 
+  padding-left: 10px;
+}
+
+.searchButton {
+  padding: 10px; 
+}
+
+/* Adjustments for different screen sizes */
+@media (min-width: 600px) {
+  .inputBase input {
+    width: 12ch;
+  }
+
+  .inputBase input:focus {
+    width: 20ch;
+  }
+}

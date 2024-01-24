@@ -17,7 +17,7 @@ const HeroSection = () => {
       <p className="lead">
         Learn Front-end development de go from Zero to Hero.
       </p>
-      <Button variant="primary">Learn More</Button>
+      {/* <Button variant="primary">Learn More</Button> */}
     </div>
   );
 };
