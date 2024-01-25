@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NewsletterForm from "./components/newletterForm/NewsletterForm";
 import NewNavBar from "./components/newNav/newnavbar";
 import Homepage from "./pages/homepage";
-import AboutUs from "./pages/about";
+import AboutUs from "./pages/aboutus";
 import Careers from "./pages/careers";
 import Previousprojects from "./pages/previousprojects";
 import RubberDuck from "./pages/rubberduck";
