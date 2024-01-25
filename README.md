@@ -46,8 +46,12 @@ Embark on this empowering venture with Zhero and discover a source of inspiratio
 
   ## Contributors
 
-  Indira, Github: [Indira4978] (https://github.com/Indira4978)
+  Indira, Github: [Indira4978](https://github.com/Indira4978)
   
-  Raquel, Github: [Raqueldelcastillo] (https://github.com/Raqueldelcastillo)
+  Raquel, Github: [Raqueldelcastillo](https://github.com/Raqueldelcastillo)
   
   Ieva, Github: [SalxIeva](http://github.com/SalxIeva)
+
+  ## Deployed link
+
+  https://from0tohero.netlify.app/
