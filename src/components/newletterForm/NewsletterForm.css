@@ -38,3 +38,7 @@
 .modalStyle {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 2.0) !important; 
 }
+
+.newsletter {
+  padding: 50px;
+}
