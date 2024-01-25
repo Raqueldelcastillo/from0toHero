@@ -39,4 +39,17 @@
 
 .read-the-docs {
   color: #888;
+
+}
+
+/* Default styles for larger screens */
+
+/* Tablet and larger screens */
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for tablet screens */
+}
+
+/* Mobile and smaller screens */
+@media only screen and (max-width: 480px) {
+  /* Adjust styles for mobile screens */
 }
