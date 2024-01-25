@@ -178,7 +178,7 @@ function RoadMap(args) {
   //     }})
 
   return (
-    <div>
+    <div className="roadmap-container">
       <h2 className="text-center my-4">Roadmap</h2>
       <Carousel
         activeIndex={activeIndex}

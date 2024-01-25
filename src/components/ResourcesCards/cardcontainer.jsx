@@ -6,8 +6,8 @@ const Cardcontainer = () => {
     {
       imageUrl: "../images/html-logo.png",
       title: "HTML",
-      subtitle: "Subtitle 1",
-      text: "Some text for Card 1.",
+      subtitle: "xxxxxx",
+      text: "xxxx",
       buttonText: "Button 1",
     },
     {

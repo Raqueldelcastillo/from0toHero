@@ -8,6 +8,15 @@
   color: #fff;
 }
 
+.roadmap-container{
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .roadmap-container {
+    padding: 0 10px;
+  }
+}
 /* .caption-title {
   flex: 1;
   display: inline;
