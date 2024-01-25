@@ -10,14 +10,16 @@ import NewsletterForm from "./components/newletterForm/NewsletterForm";
 
 function App() {
   return (
-    <div>
-      <TopNav />
-      <HeroSection />
-      <SearchBox />
-      <Caroussel />
-      <Cardcontainer />
-      <NewsletterForm />
-    </div>
+    <>
+      <div>
+        <TopNav />
+        <HeroSection />
+        <SearchBox />
+        <Caroussel />
+        <Cardcontainer />
+        <NewsletterForm />
+      </div>
+    </>
   );
 }
 
