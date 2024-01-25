@@ -14,6 +14,7 @@ import Careers from "./pages/careers";
 import Previousprojects from "./pages/previousprojects";
 import RubberDuck from "./pages/rubberduck";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Caroussel />
       <Cardcontainer />
       <NewsletterForm />
+      <Footer />
     </>
   );
 }
