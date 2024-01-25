@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import './SearchBar.css'; 
+import './searchBar.css'; 
 // add favourite icons
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
