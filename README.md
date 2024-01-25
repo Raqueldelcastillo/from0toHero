@@ -55,3 +55,7 @@ Embark on this empowering venture with Zhero and discover a source of inspiratio
   ## Deployed link
 
   https://from0tohero.netlify.app/
+
+## Screenshot
+
+![image](https://github.com/Raqueldelcastillo/from0toHero/assets/133906072/2042722f-b6b4-44e8-ae7a-cc579f68220b)
