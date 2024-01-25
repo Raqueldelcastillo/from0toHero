@@ -34,7 +34,7 @@ export default function NewsletterSubscription() {
   };
 
   return (
-    <div>
+    <div className="newsletter">
       <h3>Subscribe to Resources Newsletter!</h3>
       <form onSubmit={handleSubmit}>
         <div className="formContainer">
