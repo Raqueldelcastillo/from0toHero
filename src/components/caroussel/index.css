@@ -1,53 +1,95 @@
 .slide-content {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-    right: 15px;
-    color: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  color: #fff;
 }
 
 /* .caption-title {
-    flex: 1;
-    display: inline;
-    margin-top: 0;
-    padding-bottom: 200px;
-  }
-  
-  .key-points {
-    flex: 1;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  
-  .key-points ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-  }
-  
-  */
-
-  .caption-title {
-    flex: 1;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
-    padding: 5px;
-    margin-right: 10px; /* Adds some space between title and key points */
-    margin-bottom: 60px;
-    padding-bottom: 120px;
+  flex: 1;
+  display: inline;
+  margin-top: 0;
+  padding-bottom: 200px;
 }
 
 .key-points {
-    flex: 1;
-    background: rgba(0, 0, 0, 0.5); /* Same background as caption-title for consistency */
-    padding: 10px; /* Adds padding around the text */
+  flex: 1;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .key-points ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+*/
+
+.caption-title {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 5px;
+  margin-right: 10px; 
+  margin-bottom: 60px;
+  padding-bottom: 120px;
+}
+
+.key-points {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+}
+
+.key-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* responsiveness */
+/* @media (max-width: 600px) {
+  .slide-content {
+    padding: 10px; 
+    left: 10px;
+    right: 10px;
+  }
+
+  .caption-title, .key-points {
+    flex: 0 0 auto; 
+    margin-right: 0; 
+    padding: 5px; 
+    font-size: 14px; 
+   
+  }
+  .key-points ul {
+    padding: 5px; 
+  }
+} */
+
+
+@media (max-width: 600px) {
+  .slide-content {
+    flex-direction: column;
+    align-items: start; 
+} 
+
+  .caption-title, .key-points {
+    width: 100%; 
+    margin-bottom: 10px; 
+
+  }
+
+
+  .caption-title {
+    font-size: 14px; 
+  }
+  .key-points {
+    font-size: 12px; 
+  }
 }
