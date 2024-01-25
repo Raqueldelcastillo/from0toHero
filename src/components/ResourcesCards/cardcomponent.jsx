@@ -25,17 +25,19 @@ const CardComponent = ({ imageUrl, title, subtitle, text, buttonText }) => {
       <CardBody>
         <CardTitle tag="h5">{title || "Card title"}</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">
-          {subtitle || "Card subtitle"}
+          {subtitle || "Learning resources"}
         </CardSubtitle>
-        <CardText>{text || "Sample text-- Learning resources -- "}</CardText>
+        <CardText>{text || ""}</CardText>
 
         {/* Button with an onClick event to trigger handleButtonClick */}
-        <Button onClick={handleButtonClick}>{buttonText || "Button"}</Button>
+        <Button onClick={handleButtonClick} color="success">
+          {buttonText || "Button"}
+        </Button>
 
         {/* Display learning resources when button clicked*/}
         {showAdditionalContent && (
           <div className="mt-2">
-            <p>Additional content specific to this card.</p>
+            <p>Coming soon.</p>
             {/* Can add more content here */}
           </div>
         )}
