@@ -1,30 +1,3 @@
-/* SearchBar.css */
- 
-/* .searchBar {
-  position: relative;
-  border-radius: 4px;
-  background-color: #D2E8E3;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  width: auto 100%;
-}
-
-.searchBar:hover {
-  background-color: #FFCB9A;
-}
-
-.inputBase {
-  color: inherit;
-  width: auto calc(100% - 48px); 
-  padding-left: 10px;
-}
-
-.searchButton {
-  padding: 10px; 
-} */
-
-
 .searchBar {
   position: relative;
   border-radius: 4px;
@@ -32,7 +5,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
-  width: auto 100%; 
+  width: auto, 100%;
 }
 
 .searchBar:hover {
@@ -41,22 +14,21 @@
 
 .inputBase {
   color: inherit;
-  flex-grow: 1; /* Allows the input to grow and fill available space */
+  flex-grow: 1;
   padding-left: 10px;
 }
 
 .searchButton {
-  padding: 10px; 
+  padding: 10px;
 }
 
-/* Responsive adjustment for smaller screens */
 @media (max-width: 600px) {
   .inputBase {
     flex-grow: 0;
-    width: auto; 
+    width: auto;
   }
   
   .searchButton {
-    padding: 5px; 
+    padding: 5px;
   }
 }

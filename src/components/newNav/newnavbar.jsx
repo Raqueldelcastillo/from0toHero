@@ -1,5 +1,5 @@
 import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
-
+import "./newnav.css";
 export default function NewNavBar() {
   return (
     <nav className="nav">
@@ -9,13 +9,13 @@ export default function NewNavBar() {
       <ul>
         <CustomLink to="/about-us">About Us</CustomLink>
         <li>
-          <NavLink to="/previous-projects">Previous projects</NavLink>
+          <NavLink to="/caroussel">Roadmap</NavLink>
         </li>
         <li>
-          <NavLink to="/career">Career Paths</NavLink>
+          <NavLink to="/cardcontainer">Learning Resources</NavLink>
         </li>
         <li>
-          <NavLink to="/rubberduck">Rubber Duck Stories</NavLink>
+          <NavLink to="/rubberduck">Rubber Duck Tales</NavLink>
         </li>
       </ul>
     </nav>
