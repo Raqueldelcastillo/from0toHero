@@ -33,7 +33,7 @@ const Cardcontainer = () => {
     },
     {
       imageUrl: "./images/html-logo.png",
-      title: "GIT",
+      title: "Git",
       subtitle: "Subtitle 1",
       text: "Some text for Card 1.",
       buttonText: "Button 1",
